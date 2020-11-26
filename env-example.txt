@@ -1,0 +1,6 @@
+# Environment `development`, `test`, or `production`
+RAILS_ENV=development
+POSTGRES_USER=example_local_db_user
+POSTGRES_PASSWORD=anexamplepassword
+POSTGRES_DB=example_local_db
+POSTGRES_HOST=example_db
