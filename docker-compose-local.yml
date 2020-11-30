@@ -5,7 +5,7 @@ services:
     container_name: example_db
     image: postgres
     volumes:
-      - ./postgresql/data:/var/lib/postgresql/data
+      - postgresql/data:/var/lib/postgresql/data
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
