@@ -5,7 +5,7 @@ services:
     container_name: example_db
     image: postgres
     volumes:
-      - postgresql/data:/var/lib/postgresql/data
+      - '${PWD}/postgresql/data:/var/lib/postgresql/data'
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
@@ -30,14 +30,10 @@ services:
     ports:
       - "8983:8983"
     volumes:
-      - solr_data:/opt/solr/server/solr/mycores
+      - '${PWD}/solr_data:/opt/solr/server/solr/mycores'
     entrypoint:
       - docker-entrypoint.sh
       - solr-precreate
       - development
     depends_on:
       - example_db
-
-volumes:
-  postgres:
-  solr_data:
